@@ -18,7 +18,7 @@ sudo curl -L https://github.com/docker/compose/releases/download/1.16.1/docker-c
 sudo chmod +x /usr/local/bin/docker-compose
 ```
 
-#####测试安装结果
+##### 测试安装结果
 ```
 docker -h
 docker-compose --version
