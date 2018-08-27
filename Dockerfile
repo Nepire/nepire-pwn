@@ -51,4 +51,4 @@ RUN chmod -R 750 /home/ctf
 CMD exec /bin/bash -c "/etc/init.d/xinetd start; trap : TERM INT; sleep infinity & wait"
 
 
-EXPOSE 10001
+EXPOSE 10000
