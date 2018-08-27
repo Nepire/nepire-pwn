@@ -6,7 +6,7 @@ service ctf
     wait        = no
     user        = root
     type        = UNLISTED
-    port        = 10001
+    port        = 10000
     bind        = 0.0.0.0
     server      = /usr/sbin/chroot
     banner_fail = /etc/banner_fail
