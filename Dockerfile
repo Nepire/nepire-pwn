@@ -9,10 +9,10 @@ RUN apt-get update && pip install pwntools
 RUN apt-get update && apt-get install -y gdb xinetd build-essential
 RUN apt-get update && apt-get install -y git xinetd build-essential
 RUN git clone https://github.com/longld/peda.git ~/peda
-RUN apt-get install wget
+RUN sudo apt-get install wget
 RUN wget -q -O ~/.gdbinit-gef.py https://github.com/hugsy/gef/raw/master/gef.py
 RUN echo "source ~/peda/peda.py" >> ~/.gdbinit
-RUN apt-get install vim
+RUN sudo apt-get install vim
 RUN pip install ropgadget
 RUN sudo apt-get install ruby  
 RUN sudo apt-get install gem
