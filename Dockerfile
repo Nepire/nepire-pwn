@@ -9,7 +9,7 @@ RUN apt-get update && pip install pwntools
 RUN apt-get update && apt-get install -y gdb xinetd build-essential
 RUN apt-get update && apt-get install -y git xinetd build-essential
 RUN git clone https://github.com/longld/peda.git ~/peda
-RUN sudo apt-get install wget
+RUN apt-get install wget
 RUN wget -q -O ~/.gdbinit-gef.py https://github.com/hugsy/gef/raw/master/gef.py
 RUN echo "source ~/peda/peda.py" >> ~/.gdbinit
 RUN sudo apt-get install vim
@@ -49,6 +49,5 @@ RUN chown -R root:ctf /home/ctf
 RUN chmod -R 750 /home/ctf
 
 CMD exec /bin/bash -c "/etc/init.d/xinetd start; trap : TERM INT; sleep infinity & wait"
-
 
 EXPOSE 10000
