@@ -34,6 +34,5 @@ docker-compose --version
 > 4.vim
 >
 > 5.ropgadget
->
-> 6.one_gadget
+
 

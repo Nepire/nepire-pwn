@@ -14,12 +14,6 @@ RUN wget -q -O ~/.gdbinit-gef.py https://github.com/hugsy/gef/raw/master/gef.py
 RUN echo "source ~/peda/peda.py" >> ~/.gdbinit
 RUN apt-get update && apt-get install vim -y
 RUN pip install ropgadget
-RUN sudo apt-get install ruby  
-RUN sudo apt-get install gem
-RUN sudo gem sources --remove http://rubygems.org/              
-RUN sudo gem sources --remove https://rubygems.org/  
-RUN sudo gem sources -a https://gems.ruby-china.org/ 
-RUN gem install one_gadget	
 
 RUN useradd -m ctf
 
