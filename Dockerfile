@@ -12,7 +12,7 @@ RUN git clone https://github.com/longld/peda.git ~/peda
 RUN apt-get install wget
 RUN wget -q -O ~/.gdbinit-gef.py https://github.com/hugsy/gef/raw/master/gef.py
 RUN echo "source ~/peda/peda.py" >> ~/.gdbinit
-RUN sudo apt-get install vim
+RUN apt-get update && apt-get install vim -y
 RUN pip install ropgadget
 RUN sudo apt-get install ruby  
 RUN sudo apt-get install gem
