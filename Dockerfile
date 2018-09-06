@@ -2,6 +2,7 @@ FROM ubuntu:16.04
 
 RUN sed -i "s/http:\/\/archive.ubuntu.com/http:\/\/mirrors.tuna.tsinghua.edu.cn/g" /etc/apt/sources.list
 RUN apt-get update && apt-get -y dist-upgrade
+RUN apt-get update && apt-get install libc6-dbg xinetd build-essential
 RUN apt-get update && apt-get install -y lib32z1 xinetd build-essential
 RUN apt-get update && apt-get install -y gcc-multilib xinetd build-essential
 RUN apt-get update && apt-get install -y python-pip xinetd build-essential
@@ -12,8 +13,6 @@ RUN git clone https://github.com/longld/peda.git ~/peda
 RUN apt-get install wget
 RUN wget -q -O ~/.gdbinit-gef.py https://github.com/hugsy/gef/raw/master/gef.py
 RUN echo "source ~/peda/peda.py" >> ~/.gdbinit
-RUN apt-get update && apt-get install vim -y
-RUN pip install ropgadget
 
 RUN useradd -m ctf
 
