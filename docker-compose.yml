@@ -1,7 +1,0 @@
-version: "3"
-services:
-  pwndocker:
-    build: .
-    restart: unless-stopped
-    ports:
-      - "10000:10000"
