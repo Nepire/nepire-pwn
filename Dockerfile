@@ -14,9 +14,7 @@ RUN echo ' sys.exit(main._main())' >> /usr/bin/pip
 
 RUN apt-get update && pip install pwntools==3.5.0 ropgadget
 RUN apt-get update && apt-get install -y gdb vim
-RUN apt-get update && apt-get install -y git zsh wget
-RUN apt-get install -y fonts-powerline
-RUN wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -
+RUN apt-get update && apt-get install -y git fish wget
 RUN git clone https://github.com/longld/peda.git ~/peda
 RUN wget -q -O ~/.gdbinit-gef.py https://github.com/hugsy/gef/raw/master/gef.py
 RUN git clone git://github.com/Mipu94/peda-heap.git ~/peda-heap
