@@ -14,15 +14,29 @@ sudo apt-get install docker.io
 docker -h
 ```
 
+##### INSTALL
+```
+git clone https://github.com/Nepire/nepire-pwn.git ~/
+cd ~/nepire-pwn
+python build.py
+```
+
+##### RUN
+```
+python ~/nepire-pwn/link-pwn.py
+```
+
 ### 工具目录
 > 1.pwntools
 >
 > 2.gdb
 >
-> 3.peda、gef
+> 3.peda、gef、peda-heap
 >
 > 4.vim
 >
 > 5.ropgadget
+>
+> 6.one_gadget
 
 
