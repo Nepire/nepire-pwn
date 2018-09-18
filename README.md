@@ -11,19 +11,19 @@ sudo apt-get install docker.io
 ```
 #### 测试必要环境安装结果
 ```
-docker -h
+docker -v
 ```
 
 #### INSTALL
 ```
 git clone https://github.com/Nepire/nepire-pwn.git ~/
 cd ~/nepire-pwn
-python build.py
+./install
 ```
 
 #### RUN
 ```
-python ~/nepire-pwn/link-pwn.py
+$ nepire-pwn
 ```
 
 ### 工具目录
