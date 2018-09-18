@@ -42,7 +42,8 @@ RUN cp /bin/sh /home/ctf/bin
 RUN cp /bin/ls /home/ctf/bin
 RUN cp /bin/cat /home/ctf/bin
 
-COPY ./bin/ /home/ctf/
+RUN mkdir /home/ctf/process
+COPY ~/nepire-pwn/process/ /home/ctf/process/
 RUN chown -R root:ctf /home/ctf
 RUN chmod -R 750 /home/ctf
 
