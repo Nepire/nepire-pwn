@@ -2,7 +2,7 @@ import os
 
 def build_images():
 	os.system('docker build -t pwn ~/nepire-pwn/')
-	os.system('docker run -dit --name nepire-pwn pwn')
+	os.system('docker run --cap-add=SYS_PTRACE -dit --name nepire-pwn pwn')
 	#build images
 
 def create_bin():
@@ -31,11 +31,15 @@ def version():
 
 	print version
 
+def upload_process():
+	os.system('docker cp ~/nepire-pwn/process/ nepire-pwn:/home/ctf/')
+
 def main():
 	build_images()
+	upload_process()
 	create_bin()
 	nepire_pwn()
-	
+
 
 if __name__ == "__main__":
     main()
