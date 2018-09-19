@@ -10,6 +10,7 @@ docker,python
 ```
 git clone https://github.com/Nepire/nepire-pwn.git ~/nepire-pwn/
 cd ~/nepire-pwn
+chmod a+x install
 ./install
 ```
 

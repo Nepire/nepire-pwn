@@ -16,7 +16,7 @@ RUN apt-get update && pip install pwntools==3.5.0 ropgadget
 RUN apt-get update && apt-get install -y gdb vim
 RUN apt-get update && apt-get install -y git fish wget
 
-RUN apt-get install zsh
+RUN apt-get install -y zsh
 RUN git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 RUN cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 
