@@ -1,7 +1,7 @@
 import os
 
 def build_images():
-	os.system('docker build -t pwn ~/nepire-pwn/')
+	os.system('docker build -t pwn ~/nepire-pwn/DOCKER/')
 	os.system('docker run --cap-add=SYS_PTRACE -dit --name nepire-pwn pwn')
 	#build images
 

@@ -1,17 +1,9 @@
-# nepire-pwn
-nepire的pwn解题环境
+# NEPIRE-pwn
+Basic CTF-PWN Tool collection
 
 ### 必要环境
 ```
-docker
-```
-### 前置环境安装(ubuntu)
-```
-sudo apt-get install docker.io
-```
-#### 测试必要环境安装结果
-```
-docker -v
+docker,python
 ```
 
 #### INSTALL
@@ -26,7 +18,7 @@ cd ~/nepire-pwn
 $ nepire-pwn
 ```
 
-### 工具目录
+### MENU
 > 1.pwntools
 >
 > 2.gdb
@@ -38,5 +30,7 @@ $ nepire-pwn
 > 5.ropgadget
 >
 > 6.one_gadget
+>
+> 7.zsh/oh-my-zsh
 
 
