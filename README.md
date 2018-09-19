@@ -19,7 +19,7 @@ chmod a+x install
 $ nepire-pwn
 ```
 
-#### up_process(每次进入nepire-pwn时会将~/nepire-pwn/process/里的文件上传至环境中)
+#### up_process(每次进入nepire-pwn时会从本机的nepire-pwn/process文件夹里的文件同步至nepire-pwn)
 ```
 $ cp filename ~/nepire-pwn/process/
 ```
