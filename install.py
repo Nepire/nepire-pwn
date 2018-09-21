@@ -11,6 +11,7 @@ def create_bin():
 	os.system('echo "#! /bin/bash" > ~/nepire-pwn/nepire-pwn')
 	os.system('echo "#Author=Ep3ius_nepire" >> ~/nepire-pwn/nepire-pwn')
 	os.system('echo "docker cp ~/nepire-pwn/process/ nepire-pwn:/home/ctf/" >> ~/nepire-pwn/nepire-pwn')
+	os.system('echo "docker exec nepire-pwn bash -c "chmod -R u+x /home/ctf/process/*"" >> ~/nepire-pwn/nepire-pwn') #add process permission
 	os.system('echo "docker exec -it nepire-pwn /bin/zsh" >> ~/nepire-pwn/nepire-pwn')
 
 	os.system('chmod 777 ~/nepire-pwn/nepire-pwn')
