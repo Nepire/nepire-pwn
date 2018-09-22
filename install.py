@@ -6,12 +6,16 @@ def build_images():
 	#build images
 
 def create_bin():
+	add_process_permission = '''
+	echo "docker exec nepire-pwn bash -c 'chmod -R u+x /home/ctf/process/* '" >> ~/nepire-pwn/nepire-pwn
+    '''
+
 	os.system('touch ~/nepire-pwn/nepire-pwn')
 
 	os.system('echo "#! /bin/bash" > ~/nepire-pwn/nepire-pwn')
 	os.system('echo "#Author=Ep3ius_nepire" >> ~/nepire-pwn/nepire-pwn')
 	os.system('echo "docker cp ~/nepire-pwn/process/ nepire-pwn:/home/ctf/" >> ~/nepire-pwn/nepire-pwn')
-	os.system('echo "docker exec nepire-pwn bash -c "chmod -R u+x /home/ctf/process/*"" >> ~/nepire-pwn/nepire-pwn') #add process permission
+	os.system(add_process_permission) #add permission u+x
 	os.system('echo "docker exec -it nepire-pwn /bin/zsh" >> ~/nepire-pwn/nepire-pwn')
 
 	os.system('chmod 777 ~/nepire-pwn/nepire-pwn')
@@ -35,6 +39,10 @@ def version():
 
 def upload_process():
 	os.system('docker cp ~/nepire-pwn/process/ nepire-pwn:/home/ctf/')
+
+def stop_docker():
+	docker stop nepire-pwn
+
 
 def main():
 	build_images()
