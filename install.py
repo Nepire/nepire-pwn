@@ -41,7 +41,7 @@ def upload_process():
 	os.system('docker cp ~/nepire-pwn/process/ nepire-pwn:/home/ctf/')
 
 def stop_docker():
-	docker stop nepire-pwn
+	os.system('docker stop nepire-pwn')
 
 
 def main():
