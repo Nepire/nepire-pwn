@@ -23,8 +23,9 @@ RUN cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 RUN git clone https://github.com/longld/peda.git ~/peda
 RUN wget -q -O ~/.gdbinit-gef.py https://github.com/hugsy/gef/raw/master/gef.py
 RUN git clone git://github.com/Mipu94/peda-heap.git ~/peda-heap
-RUN echo "source ~/peda/peda.py" >> ~/.gdbinit
-RUN echo "source ~/peda-heap/peda.py" >> ~/.gdbinit
+
+wget -q -O- https://raw.githubusercontent.com/Nepire/Pwngdb/master/install.sh | sh
+
 RUN apt-get install -y ruby gem
 RUN gem sources --remove http://rubygems.org/ 
 RUN gem sources --remove https://rubygems.org/ 
