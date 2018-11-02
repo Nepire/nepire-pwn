@@ -20,7 +20,8 @@ RUN git clone https://github.com/longld/peda.git ~/peda
 RUN wget -q -O ~/.gdbinit-gef.py https://github.com/hugsy/gef/raw/master/gef.py
 RUN git clone git://github.com/Mipu94/peda-heap.git ~/peda-heap
 
-RUN sudo wget -q -O- https://raw.githubusercontent.com/Nepire/Pwngdb/master/install.sh | sh
+RUN apt-get update && apt-get install -y sudo
+RUN wget -q -O- https://raw.githubusercontent.com/Nepire/Pwngdb/master/install.sh | sh
 
 RUN apt-get install -y ruby gem
 RUN gem sources --remove http://rubygems.org/ 
