@@ -33,7 +33,7 @@ def nepire_pwn():
 	print over
 
 def version():
-	version = '1.0'
+	version = '1.1'
 
 	print version
 
