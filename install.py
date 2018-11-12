@@ -7,7 +7,7 @@ def build_images():
 
 def create_bin():
 	add_process_permission = '''
-	echo "docker exec nepire-pwn bash -c 'chmod -R u+x /home/ctf/process/* '" >> ~/nepire-pwn/nepire-pwn
+	echo "docker exec nepire-pwn bash -c 'chmod -R u+x /home/ctf/* '" >> ~/nepire-pwn/nepire-pwn
     '''
 
 	os.system('touch ~/nepire-pwn/nepire-pwn')
