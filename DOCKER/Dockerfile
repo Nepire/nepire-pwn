@@ -3,7 +3,7 @@ FROM ubuntu:16.04
 RUN sed -i "s/http:\/\/archive.ubuntu.com/http:\/\/mirrors.tuna.tsinghua.edu.cn/g" /etc/apt/sources.list
 RUN apt-get update && apt-get -y dist-upgrade
 RUN apt-get update && apt-get install libc6-dbg
-RUN apt-get update && apt-get install -y gcc
+RUN apt-get update && apt-get install -y gcc netcat
 RUN apt-get update && apt-get install -y gcc-multilib gdb-multiarch cmake make
 RUN apt-get update && apt-get install -y python-dev python-pip python-setuptools
 

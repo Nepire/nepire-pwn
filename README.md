@@ -38,5 +38,7 @@ $ cp filename ~/nepire-pwn/process/
 > 6.one_gadget
 >
 > 7.zsh/oh-my-zsh
+> 
+> 8.netcat
 
 
