@@ -1,0 +1,5 @@
+#! /bin/bash
+#Author = Ep3ius_nepire
+sudo docker stop nepire-pwn
+sudo docker rm nepire-pwn
+sudo docker rmi pwn
