@@ -43,6 +43,9 @@ def upload_process():
 def stop_docker():
 	os.system('docker stop nepire-pwn')
 
+def upload_tools():
+	#swich gdb-tools 
+	os.system('')
 
 def main():
 	build_images()
