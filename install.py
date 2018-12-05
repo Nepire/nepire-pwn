@@ -38,7 +38,7 @@ def version():
 	print version
 
 def upload_process():
-	os.system('docker cp ~/nepire-pwn/process/ nepire-pwn:/home/ctf/pwn/process/')
+	os.system('docker cp ~/nepire-pwn/process/ nepire-pwn:/home/ctf/pwn/process')
 
 def upload_tools():
 	#swich gdb-tools
