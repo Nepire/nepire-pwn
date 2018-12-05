@@ -45,6 +45,7 @@ RUN cp /bin/sh /home/ctf/bin
 RUN cp /bin/ls /home/ctf/bin
 RUN cp /bin/cat /home/ctf/bin
 
+RUN mkdir /home/ctf/pwn
 RUN mkdir /home/ctf/pwn/process
 RUN mkdir /home/ctf/pwn/tools
 RUN chown -R root:ctf /home/ctf
