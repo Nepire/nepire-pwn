@@ -38,14 +38,25 @@ def version():
 	print version
 
 def upload_process():
-	os.system('docker cp ~/nepire-pwn/process/ nepire-pwn:/home/ctf/')
-
-def stop_docker():
-	os.system('docker stop nepire-pwn')
+	os.system('docker cp ~/nepire-pwn/process/ nepire-pwn:/home/ctf/pwn/process/')
 
 def upload_tools():
-	#swich gdb-tools 
-	os.system('')
+	#swich gdb-tools
+	peda_init = '''
+	source ~/peda/peda.py
+	source ~/Pwngdb/pwngdb.py
+	source ~/Pwngdb/angelheap/gdbinit.py
+
+	define hook-run
+	python
+	import angelheap
+	angelheap.init_angelheap()
+	end
+	end
+	source ~/peda/peda.py
+	''' 
+	os.system('touch ~/nepire-pwn/swich-gdb/swich-peda')
+	os.system('echo "#! /bin/bash" > ~/nepire-pwn/swich-peda ')
 
 def main():
 	build_images()

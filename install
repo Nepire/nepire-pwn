@@ -1,3 +1,7 @@
 #! /bin/bash
 #Author = Ep3ius_nepire
+if ! [ -x "$(command -v docker)" ]; then
+  sudo apt-get install docker.io
+fi
+
 python install.py
