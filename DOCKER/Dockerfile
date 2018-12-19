@@ -8,9 +8,7 @@ RUN apt-get update && apt-get install -y gcc-multilib gdb-multiarch cmake make
 RUN apt-get update && apt-get install -y python-dev python-pip python-setuptools
 
 RUN pip install -U pip
-RUN echo 'from pip import main' > /usr/bin/pip
-RUN echo 'if name == 'main':' >> /usr/bin/pip
-RUN echo ' sys.exit(main._main())' >> /usr/bin/pip
+RUN export LC_ALL=C
 
 RUN apt-get update && pip install pwntools==3.5.0 ropgadget
 RUN apt-get update && apt-get install -y gdb vim

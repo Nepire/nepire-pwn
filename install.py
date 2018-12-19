@@ -14,9 +14,9 @@ def create_bin():
 
 	os.system('echo "#! /bin/bash" > ~/nepire-pwn/nepire-pwn')
 	os.system('echo "#Author=Ep3ius_nepire" >> ~/nepire-pwn/nepire-pwn')
-	os.system('echo "docker cp ~/nepire-pwn/process/ nepire-pwn:/home/ctf/" >> ~/nepire-pwn/nepire-pwn')
+	os.system('echo "sudo docker cp ~/nepire-pwn/process/ nepire-pwn:/home/ctf/pwn/process" >> ~/nepire-pwn/nepire-pwn')
 	os.system(add_process_permission) #add permission u+x
-	os.system('echo "docker exec -it nepire-pwn /usr/bin/fish" >> ~/nepire-pwn/nepire-pwn')
+	os.system('echo "sudo docker exec -it nepire-pwn /usr/bin/fish" >> ~/nepire-pwn/nepire-pwn')
 
 	os.system('chmod 777 ~/nepire-pwn/nepire-pwn')
 	os.system('cp ~/nepire-pwn/nepire-pwn /usr/bin/nepire-pwn')
@@ -33,7 +33,7 @@ def nepire_pwn():
 	print over
 
 def version():
-	version = '1.1'
+	version = '1.1.2'
 
 	print version
 
