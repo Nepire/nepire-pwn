@@ -7,14 +7,14 @@ def build_images():
 
 def create_bin():
 	add_process_permission = '''
-	echo "docker exec nepire-pwn bash -c 'chmod -R u+x /home/ctf/* '" >> ~/nepire-pwn/nepire-pwn
+	echo "docker exec nepire-pwn bash -c 'chmod -R u+x /home/ctf/pwn/process/* '" >> ~/nepire-pwn/nepire-pwn
     '''
 
 	os.system('touch ~/nepire-pwn/nepire-pwn')
 
 	os.system('echo "#! /bin/bash" > ~/nepire-pwn/nepire-pwn')
 	os.system('echo "#Author=Ep3ius_nepire" >> ~/nepire-pwn/nepire-pwn')
-	os.system('echo "sudo docker cp ~/nepire-pwn/process/ nepire-pwn:/home/ctf/pwn/process" >> ~/nepire-pwn/nepire-pwn')
+	os.system('echo "sudo docker cp ~/nepire-pwn/process/ nepire-pwn:/home/ctf/pwn" >> ~/nepire-pwn/nepire-pwn')
 	os.system(add_process_permission) #add permission u+x
 	os.system('echo "sudo docker exec -it nepire-pwn /usr/bin/fish" >> ~/nepire-pwn/nepire-pwn')
 
@@ -33,12 +33,12 @@ def nepire_pwn():
 	print over
 
 def version():
-	version = '1.1.2'
+	version = '1.2.0'
 
 	print version
 
 def upload_process():
-	os.system('docker cp ~/nepire-pwn/process/ nepire-pwn:/home/ctf/pwn/process')
+	os.system('docker cp ~/nepire-pwn/process/ nepire-pwn:/home/ctf/pwn')
 
 def upload_tools():
 	#swich gdb-tools
