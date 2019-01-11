@@ -4,4 +4,4 @@ if ! [ -x "$(command -v docker)" ]; then
   sudo apt-get install docker.io
 fi
 
-python install.py
+sudo python install.py
