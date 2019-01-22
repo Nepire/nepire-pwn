@@ -3,3 +3,4 @@
 sudo docker stop nepire-pwn
 sudo docker rm nepire-pwn
 sudo docker rmi pwn
+sudo rm /usr/bin/nepire-pwn
