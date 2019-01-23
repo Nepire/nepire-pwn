@@ -5,5 +5,5 @@ cd ~/nepire-pwn
 if ! [ -x "$(command -v docker)" ]; then
   sudo apt-get install docker.io
 fi
-
+chmod a+x ~/nepire-pwn/*
 sudo python install.py

@@ -21,11 +21,11 @@ RUN git clone git://github.com/Mipu94/peda-heap.git ~/peda-heap
 RUN apt-get update && apt-get install -y sudo
 RUN wget -q -O- https://raw.githubusercontent.com/Nepire/Pwngdb/master/install.sh | sh
 
-RUN apt-get install -y ruby gem
-RUN gem sources --remove http://rubygems.org/ 
-RUN gem sources --remove https://rubygems.org/ 
-RUN gem sources -a https://gems.ruby-china.com/ 
-RUN gem install one_gadget
+"RUN apt-get install -y ruby-dev
+"RUN gem sources --remove http://rubygems.org/
+"RUN gem sources --remove https://rubygems.org/
+"RUN gem sources -a https://gems.ruby-china.com/
+"RUN gem install one_gadget
 
 RUN useradd -m ctf
 

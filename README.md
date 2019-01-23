@@ -8,10 +8,7 @@ docker,python
 
 #### INSTALL
 ```
-git clone https://github.com/Nepire/nepire-pwn.git ~/nepire-pwn/
-cd ~/nepire-pwn
-chmod a+x install
-./install
+wget -q -O- https://raw.githubusercontent.com/Nepire/nepire-pwn/master/install | sh
 ```
 
 #### RUN
@@ -19,7 +16,8 @@ chmod a+x install
 $ nepire-pwn
 ```
 
-#### up_process(每次进入nepire-pwn时会从本机的nepire-pwn/process文件夹里的文件同步至nepire-pwn)
+#### up_process
+每次进入nepire-pwn时会从本机的nepire-pwn/process文件夹里的文件同步至nepire-pwn
 ```
 $ cp filename ~/nepire-pwn/process/
 ```
@@ -29,16 +27,12 @@ $ cp filename ~/nepire-pwn/process/
 >
 > 2.gdb
 >
-> 3.peda、gef、peda-heap
+> 3.Pwndbg|pwngdb
 >
 > 4.vim
 >
 > 5.ropgadget
 >
-> 6.one_gadget
+> 6.netcat
 >
 > 7.zsh/oh-my-zsh
-> 
-> 8.netcat
-
-
