@@ -5,7 +5,7 @@ def build_images():
 	os.system('docker run --cap-add=SYS_PTRACE -dit --name nepire-pwn pwn')
 	#build images
 
-def create_bin():
+def create_start_up_bin():
 	add_process_permission = '''
 	echo "docker exec nepire-pwn bash -c 'chmod -R u+x /home/ctf/pwn/process/* '" >> ~/nepire-pwn/nepire-pwn
     '''
@@ -21,14 +21,17 @@ def create_bin():
 	os.system('chmod 777 ~/nepire-pwn/nepire-pwn')
 	os.system('cp ~/nepire-pwn/nepire-pwn /usr/bin/nepire-pwn')
 
+def create_bin():
+    create_start_up_bin()
+
 def nepire_pwn():
 	over = '''
-			 _   _ _____ ____ ___ ____  _____                          
-			| \ | | ____|  _ \_ _|  _ \| ____|     _ ____      ___ __  
-			|  \| |  _| | |_) | || |_) |  _| _____| '_ \ \ /\ / / '_ \ 
+			 _   _ _____ ____ ___ ____  _____
+			| \ | | ____|  _ \_ _|  _ \| ____|     _ ____      ___ __
+			|  \| |  _| | |_) | || |_) |  _| _____| '_ \ \ /\ / / '_ \
 			| |\  | |___|  __/| ||  _ <| |__|_____| |_) \ V  V /| | | |
 			|_| \_|_____|_|  |___|_| \_\_____|    | .__/ \_/\_/ |_| |_|
-			                                      |_|                  
+			                                      |_|
 	'''
 	print over
 
@@ -54,7 +57,7 @@ def upload_tools():
 	end
 	end
 	source ~/peda/peda.py
-	''' 
+	'''
 	os.system('touch ~/nepire-pwn/swich-gdb/swich-peda')
 	os.system('echo "#! /bin/bash" > ~/nepire-pwn/swich-peda ')
 
@@ -68,5 +71,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
