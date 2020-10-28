@@ -8,5 +8,5 @@ update
 
 这边咕了，去开发自动化独轮车了，蛆一日不灭，圣战一日不止
 
-![img](./1761279170.jpg)
+![img](https://raw.githubusercontent.com/Nepire/nepire-pwn/master/1761279170.jpg)
 
