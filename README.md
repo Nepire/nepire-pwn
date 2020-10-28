@@ -1,38 +1,12 @@
 # NEPIRE-pwn
 Basic CTF-PWN Tool collection
+update
 
-### 必要环境
-```
-docker,python
-```
+好几年了，完全更新一下，以前以为两台虚拟机1604和1804就够应对不用再弄什么docker就简陋的写了，结果现在libc的利用多到不想开虚拟机，就花了两个早上整了下这些环境，不过我的那个pwngdb有时会安装失败我是没想到的
 
-#### INSTALL
-```
-wget -q -O- https://raw.githubusercontent.com/Nepire/nepire-pwn/master/install | sh
-```
 
-#### RUN
-```
-$ nepire-pwn
-```
 
-#### up_process
-每次进入nepire-pwn时会从本机的nepire-pwn/process文件夹里的文件同步至nepire-pwn
-```
-$ cp filename ~/nepire-pwn/process/
-```
+这边咕了，去开发自动化独轮车了，蛆一日不灭，圣战一日不止
 
-### MENU
-> 1.pwntools
->
-> 2.gdb
->
-> 3.Pwndbg|pwngdb
->
-> 4.vim
->
-> 5.ropgadget
->
-> 6.netcat
->
-> 7.zsh/oh-my-zsh
+![img](./1761279170.jpg)
+
